@@ -21,7 +21,7 @@ COPY . .
 ENV DATABASE_URL=""
 
 # Default command to run dbmate migrations using npx
-CMD ["npx", "dbmate", "up"]
+CMD ["sh", "-c", "npx dbmate up"]
 
 # Expose necessary ports if needed
 EXPOSE 5432 3306
