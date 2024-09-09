@@ -19,10 +19,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      # Step 4: Build the Docker image
       - name: Build Docker image
-        run: docker build -t dbmate-container .
+        run: docker build -t dbmate-npm-container .
 
       # Step 5: Run Dbmate migrations using the Docker image, passing the DATABASE_URL from GitHub Secrets
       - name: Run Dbmate migrations
-        run: docker run --rm -e DATABASE_URL="${{ secrets.DATABASE_URL }}" dbmate-container up
+        run: docker run --rm -e DATABASE_URL="${{ secrets.DATABASE_URL }}" dbmate-npm-container
