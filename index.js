@@ -47,6 +47,10 @@ async function commitAndPushPgDump() {
             await git.pull('origin', 'main');
         }
 
+        // Configurar el nombre y correo del autor para este repositorio
+        await git.addConfig('user.name', 'dbmigrations-bot');
+        await git.addConfig('user.email', 'dbmigrations@bot.com');
+
         // Copiar el archivo al directorio de destino
         fs.copyFileSync(filePath, destinationPath);
         console.log(`Archivo copiado exitosamente a ${destinationPath}`);
