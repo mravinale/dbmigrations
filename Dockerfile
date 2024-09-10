@@ -18,8 +18,8 @@ RUN npm install
 COPY . .
 
 # Configure Git with a default name and email
-RUN git config --global user.name "Migrations-Bot" && \
-    git config --global user.email "Migrations@bot.com"
+RUN git config --global user.name "mravinale" && \
+    git config --global user.email "mravinale@gmail.com"
 
 # Expose necessary ports if needed
 EXPOSE 5432 3306
