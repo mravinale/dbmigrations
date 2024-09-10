@@ -21,13 +21,13 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            --build-arg CI_TOKEN=${{ secrets.GITHUB_TOKEN }} \
+            --build-arg CI_TOKEN=${{ secrets.CI_TOKEN }} \
             --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
             -t dbmigrations .
 
       - name: Run Docker container
         run: |
           docker run \
-            -e CI_TOKEN=${{ secrets.GITHUB_TOKEN }} \
+            -e CI_TOKEN=${{ secrets.CI_TOKEN }} \
             -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
             dbmigrations
