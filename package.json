@@ -1,5 +1,16 @@
 {
+  "name": "dbmigrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
-    "dbmate": "^2.20.0"
+    "axios": "^1.7.7",
+    "dbmate": "^2.20.0",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "simple-git": "^3.26.0"
   }
 }
