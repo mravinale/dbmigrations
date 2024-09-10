@@ -20,8 +20,10 @@ COPY . .
 # Make DATABASE_URL configurable through environment variables
 ENV DATABASE_URL=""
 
-# Default command to run dbmate migrations using npx
-CMD ["sh", "-c", "npx dbmate up"]
-
 # Expose necessary ports if needed
 EXPOSE 5432 3306
+
+# Default command to run dbmate migrations using npx
+CMD ["sh", "-c", "npx dbmate up && npm run start"]
+
+
