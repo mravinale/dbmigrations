@@ -6,7 +6,8 @@ require('dotenv').config();  // Cargar las variables del archivo .env
 
 // Configuración del repositorio
 const GITHUB_TOKEN = process.env.CI_TOKEN; // Reemplaza con tu token de acceso personal
-const REPO_URL = `https://mravinale:${GITHUB_TOKEN}@github.com/mravinale/dbmigrations.git`; // Reemplaza con tu repo y usuario
+console.log('Token:', GITHUB_TOKEN);
+const REPO_URL = `https://x-access-token:${GITHUB_TOKEN}@github.com/mravinale/dbmigrations.git`; // Reemplaza con tu repo y usuario
 const REPO_DIR = './backup';  // Carpeta donde clonarás o ya tienes el repo
 
 // Función para ejecutar el comando pg_dump y generar el archivo dump.sql
