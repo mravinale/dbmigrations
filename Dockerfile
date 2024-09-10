@@ -3,7 +3,7 @@ FROM node:14-alpine
 
 # Install necessary dependencies: mysql-client, postgresql-client, sqlite
 RUN apk update && \
-    apk add --no-cache mysql-client postgresql-client sqlite
+    apk add --no-cache mysql-client postgresql-client sqlite git
 
 # Set the working directory
 WORKDIR /app
